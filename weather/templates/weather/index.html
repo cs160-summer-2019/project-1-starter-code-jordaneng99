@@ -7,28 +7,37 @@
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Questrial&display=swap">
+  
+  <style type="text/css">
+  html {
+            min-height: 100%; 
+       }
+       body {
+            background: linear-gradient(#037278, #5EA0A4, #FFCA28);
+       }
+    a, h1 {
+      font-family:questrial;
+    }
+  </style>
 </head>
 <body>
 
 	<!-- replace this html -->
 	<div class="container">
-		<div class="jumbotron text-light bg-primary">
+		<div class="jumbotron text-light bg-success">
 			<h1>Congratulations</h1>
-			<p>You've set your environment up correctly!</p>
 		</div>
 
-		<a href="/weather/forecast/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Forecast</a>
-		<a href="/weather/forecast/alert/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Forecast with alert</a>
-		<a href="/weather/comparison/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Comparison</a>
-		<a href="/weather/comparison/alert/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Comparison with alert</a>
+		<a href="/weather/forecast/" class="btn btn-secondary btn-xs active" role="button" aria-pressed="true">Forecast</a>
+		<a href="/weather/forecast/alert/" class="btn btn-secondary btn-xs active" role="button" aria-pressed="true">Forecast with alert</a>
+		<a href="/weather/comparison/" class="btn btn-secondary btn-xs active" role="button" aria-pressed="true">Comparison</a>
+		<a href="/weather/comparison/alert/" class="btn btn-secondary btn-xs active" role="button" aria-pressed="true">Comparison with alert</a>
 	</div>
-	
-	<!-- /replace this html -->
+
+  <h1>
+    Click <img src="http://chittagongit.com/download/86607"></img> to return to this index.
+  </h1>
+    
 </body>
 </html>
-
-
-
-
-

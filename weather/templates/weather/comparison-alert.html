@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -7,9 +8,87 @@
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Questrial&display=swap">
 
+  <style type="text/css">
+    html {
+      min-height: 100%;
+    }
+
+    body {
+      background: linear-gradient(#037278, #5EA0A4, #FFCA28);
+    }
+
+    h1 {
+      font-size: 75px;
+      font-family: questrial;
+      color: white;
+    }
+
+    #overlay {
+      position: fixed;
+      display: none;
+      width: 70%;
+      height: 20%;
+      background-color: #FD6F6F;
+      z-index: 2;
+      cursor: pointer;
+  </style>
 </head>
+
 <body>
-	<!-- your comparison interface with alert here -->
+  <div class="container">
+    <img src="https://www.tcwreckersales.com/wp-content/uploads/2017/01/search-icon-white.png" width="100" height="100" style="position: fixed; top:0; left:0;">
+    
+    <a href="/weather/">
+      <img src="http://chittagongit.com/download/86607" width="100" height="100" style="position: fixed; top:0; right:0;">
+    </a>
+
+
+<svg width="700" height="500">
+    <rect x="0" y="20" width="700" height="75" style="fill:gray;" />
+      <text x="55" y="85" fill="white" font-size="60">Search Cities</text>
+  <rect x="0" y="95" width="700" height="150" style="fill:lightgray;" />
+  <text x="55" y="155" fill="gray" font-size="50" style="font-family:questrial">
+    <tspan x="55" y="155" style="font-family:questrial">Oakland &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; &plus;</tspan>
+    <tspan x="55" y="225" style="font-family:questrial">Richmond &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; &plus;</tspan>
+  </text>
+  
+  <div id="overlay" align="center">
+    <h1>
+       Warning! <br> Extreme weather <br> in your area!
+    </h1>
+    <button onclick="off()" class="btn btn-secondary btn-lg active" style="font-family: questrial">Got it!</button>
+  </div>
+  
+  <script>
+    document.ready(on());
+    function on() { document.getElementById("overlay").style.display = "block";}
+    function off() { document.getElementById("overlay").style.display = "none";}
+  </script>
+  
+  <h1 class="text-light">
+     My Cities: <br><br><br>
+     Berkeley
+     <img src="/static/weather/images/sun.png"></img> <br><br>
+     San Francisco
+     <img src="/static/weather/images/sun.png"></img> <br><br>
+     Seattle
+     <img src="/static/weather/images/rain.png"></img>
+     </h1>
+</svg>
+
+    <a href="/weather/forecast/">
+      <img border="0" src="/static/weather/images/arrow.png" width="100" height="100" style="position: fixed; bottom:0; left:0;">
+    </a>
+    <a href="/weather/comparison/">
+      <img border="0" src="https://www.tcwreckersales.com/wp-content/uploads/2017/01/search-icon-white.png" width="100" height="100" style="position: fixed; top:0; left:0;">
+    </a>
+    <a href="/weather/near/me/">
+      <img border="0" src="http://obscuradigital.com/wp-content/uploads/2013/03/map_marker_white.png" width="100" height="100" style="position: fixed; bottom:0; right:0;">
+    </a>
+
+  </div>
 </body>
+
 </html>

@@ -3,18 +3,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forecast - Alert!</title>
+	<title>Current Weather</title>
 	
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Questrial&display=swap">
 
+  <style type="text/css">
+  html {
+            min-height: 100%; 
+       }
+       body {
+            background: linear-gradient(#000000,#383838, #9A9A9A, #737373, #383838);
+       }
+    h1 {
+      font-size: 250px;
+      font-family: questrial;
+    }
+    h2 {
+      font-size: 100px;
+      font-family: questrial;
+    }
+    
+    #overlay {
+      position: fixed;
+      display: none;
+      width: 70%;
+      height: 20%;
+      background-color: #FD6F6F;
+      z-index: 2;
+      cursor: pointer;
+  </style>
+  
 </head>
 <body>
-	<!-- your single-location forecast with alert interface here -->
+
+  <div class= "container">
+      <a href="/weather/comparison/">
+        <img border="0" src="https://www.tcwreckersales.com/wp-content/uploads/2017/01/search-icon-white.png" width="100" height="100" style="position: fixed; top:0; left:0;">
+      </a>
+    <a href="/weather/">
+      <img src="http://chittagongit.com/download/86607" width="100" height="100" style="position: fixed; top:0; right:0;">
+    </a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>        
+    
+    <div class="text-center text-light">
+      <center>
+              <img src="/static/weather/images/scroll-rain.png" width="700" height="450" align="center">  
+        <div id="overlay" align="center">
+          <h3 style="font-size:75px; font-family: questrial">
+            Warning! <br> Extreme weather <br> in your area!
+          </h3>
+          <button onclick="off()" class="btn btn-secondary btn-lg active" style="font-family: questrial">Got it!</button>
+        </div>
+        <h1>54&deg;</h1>
+        <h2>11:00am</h2>
+        <h2>Berkeley, CA</h2>
+      </center>
+    </div>
+
+    <a href="/weather/near/me/">
+      <img border="0" src="http://obscuradigital.com/wp-content/uploads/2013/03/map_marker_white.png" width="100" height="100" style="position: fixed; bottom:0; right:0;">
+    </a>
+	</div>
+	
+  <script>
+    document.ready(on());
+    function on() { document.getElementById("overlay").style.display = "block";}
+    function off() { document.getElementById("overlay").style.display = "none";}
+  </script>
+  
 </body>
 </html>
-
-
-
-
-

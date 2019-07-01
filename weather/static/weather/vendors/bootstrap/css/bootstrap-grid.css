@@ -1156,9 +1156,7 @@ html {
   display: table-row !important;
 }
 
-.d-table-cell {
-  display: table-cell !important;
-}
+
 
 .d-flex {
   display: -webkit-box !important;
